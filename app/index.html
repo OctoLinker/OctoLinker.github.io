@@ -1,0 +1,165 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OctoLinker</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet" type="text/css">
+
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/jlmafbaeoofdegohdhinkhilhclaklkp">
+
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <ul class="navigation-list">
+              <li class="navigation-item"><a href="#about">About</a></li>
+              <li class="navigation-item"><a href="#support">Support</a></li>
+              <li class="navigation-item"><a href="#news">News</a></li>
+            </ul>
+            <button onclick="chrome.webstore.install()" id="install-button--small" class="button right">Install</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="row header">
+        <div class="col-xs-10 col-xs-offset-1">
+          <figure class="header-figure">
+            <img src="img/OctoLinker-mascot.png" alt="" width="488">
+          </figure>
+
+          <div class="header-content">
+            <h1 class="header-content--headline">OctoLinker &mdash; <small class="text-muted">Links together, what belongs together.</small></h1>
+          	<div class="center">
+              <button onclick="chrome.webstore.install()" id="install-button" class="button button-big">Install Extension</button>
+						</div>
+						<small class="header-content--small">Google Chrome Browser Extension</small>
+          </div>
+
+        </div>
+      </header>
+
+      <section class="row content-part content-about" id="about">
+        <div class="content-part--header">
+          <div class="col-xs-10 col-xs-offset-1">
+            <p class="content-navigation">About</p>
+          </div>
+        </div>
+
+        <div class="content-part--content">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 class="content-lead">Navigate through projects on GitHub.com efficiently with the OctoLinker browser extension.</h2>
+            <p>Most projects consist of many files and third party dependencies. Files are referencing other files and / or dependencies by language specific statements like include or require. Dependencies are most likely declared in a file called manifest e.g. package.json or Gemfile. The OctoLinker browser extension makes these references clickable. No more copy and search.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="row content-part content-support" id="support">
+        <div class="content-part--header">
+          <div class="col-xs-10 col-xs-offset-1">
+            <p class="content-navigation">Support</p>
+          </div>
+        </div>
+
+        <div class="content-part--image">
+          <figure>
+            <img src="img/OctoLinker-mascot-down.png" alt="" width="205">
+          </figure>
+        </div>
+
+        <div class="content-part--content">
+          <div class="col-xs-10 col-xs-offset-1">
+            <p>The OctoLinker is language agnostic and easy to extend in the latest version. It potentially can handle any programming language.</p>
+            <p>Right now – just a few languages/files are supported: JavaScript, Ruby (partial), package.json, composer.json and bower.json. The plan is to expand this list further in the next weeks / months. Help me to add more languages! Check out the <a href="https://github.com/OctoLinker/browser-extension/issues?q=is%3Aopen+is%3Aissue+label%3Afeature">pending feature requests</a> on GitHub.com along with the <a href="https://github.com/octoLinker/browser-extension/blob/master/CONTRIBUTING.md">contribute</a> and <a href="https://github.com/octoLinker/browser-extension/blob/dev/DEVELOPER.md">developer</a> guide.</p>
+            <p>If you encounter a problem using OctoLinker, or you would like to request an enhancement, please open an issue.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="row content-part content-twitter" id="news">
+        <div class="content-part--header">
+          <div class="col-xs-10 col-xs-offset-1">
+            <p class="content-navigation">news</p>
+          </div>
+        </div>
+
+        <div class="content-part--image">
+          <figure>
+            <img src="img/OctoLinker-mascot-baby_fixed.png" alt="" width="123">
+          </figure>
+        </div>
+
+        <div class="content-part--content">
+          <div class="col-xs-3 col-xs-offset-1">
+            <figure class="content-twitter--img">
+              <img src="img/OctoLinker-twitter.png" alt="" class="content-twitter--img">
+            </figure>
+          </div>
+          <div class="col-xs-7">
+            <p class="content-twitter--tweet">Pork chop kielbasa flank andouille bresaola steak pork chop picanha chuck. Pastrami swine ham hock ball tip jowl ground round bresaola. <a href="">@rubygems</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="footer">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <ul class="footer-list">
+              <li class="footer-list--item"><a href="#about">About</a></li>
+              <li class="footer-list--item"><a href="#support">Support</a></li>
+              <li class="footer-list--item footer-list--image">
+                <figure>
+                  <img src="img/OctoLinker-mascot-tentacle.png" alt="" width="158">
+                </figure>
+              </li>
+              <li class="footer-list--item"><a href="#github">Github</a></li>
+              <li class="footer-list--item"><a href="#twitter">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="footer-disclaimer">
+              <small>copyright 2014 - Present<br>Licensed under the MIT Licence</small>
+            </div>
+            <div class="footer-logos">
+              <img src="img/art-noir-logo.png" alt="" class="footer-logos--img">
+              <a class="footer-logos--petereberlecom" href="http://peter-eberle.com">peter-eberle.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

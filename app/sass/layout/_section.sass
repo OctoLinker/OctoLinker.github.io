@@ -1,0 +1,43 @@
+$navigation-circle--size: 8px
+
+.content-part
+  margin-top: 134px
+
+.content-part--header
+  +cf
+
+.content-part--image
+  margin: 0 auto
+  margin-top: 40px
+
+  img
+    margin: 0 auto
+
+.content-part--content
+  +cf
+  margin-top: 72px
+  font-size: 26px
+  color: $color-grey
+  font-weight: 300
+
+.content-lead
+  font-weight: 400
+  color: $color-accent
+  line-height: 1.6
+
+.content-navigation
+  text-transform: uppercase
+  text-align: center
+  font-size: 12px
+  font-weight: 700
+
+  &::after
+    content: ''
+    background-color: $color-primary
+    border-radius: 50%
+    height: $navigation-circle--size
+    width: $navigation-circle--size
+    position: absolute
+    left: 50%
+    top: 30px
+    margin-left: -$navigation-circle--size/2

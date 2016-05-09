@@ -1,0 +1,19 @@
+{
+  "name": "easyGruntBoilerplate",
+  "version": "0.0.1",
+  "authors": [
+    "petereberlecom <me@peter-eberle.com>"
+  ],
+  "description": "easy grunt boilerplate",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}

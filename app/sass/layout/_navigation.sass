@@ -1,0 +1,37 @@
+.navigation
+  padding: 10px 0 10px 0
+
+
+.navigation-list
+  +ce
+  display: inline
+
+
+.navigation-item
+  +ce
+  display: inline
+  text-transform: uppercase
+  font-weight: 700
+  color: $color-text--primary
+  margin-right: 48px
+  line-height: 1.42
+
+  &:last-child
+    margin-right: 0
+
+  &:hover
+    border-bottom: 2px solid $color-text--primary
+
+
+
+// reset all a style
+.navigation-item
+  a
+    color: $color-text--primary
+    text-decoration: none
+
+    &::hover,
+    &::active,
+    &::visited
+      color: $color-text--primary
+      text-decoration: none

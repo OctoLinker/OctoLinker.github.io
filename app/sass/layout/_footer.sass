@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer
+  margin-top: 150px
+  margin-bottom: 150px
+
+.footer-list
+  +ce
+
+.footer-list--item
+  +ce
+  display: block
+  float: left
+  padding-top: 70px
+  vertical-align: baseline
+  width: percentage(1/5)
+  text-align: center
+  font-size: 12px
+  font-weight: 700
+  text-transform: uppercase
+  color: $color-accent
+
+  a
+    color: $color-accent
+
+
+.footer-list--image
+  +ce
+
+
+
+.footer-disclaimer
+  margin-top: 105px
+  font-size: 12px
+  color: $color-accent
+  text-transform: uppercase
+  text-align: center
+  font-weight: 700
+
+.footer-logos
+  margin-top: 25px
+  text-align: center
+
+
+.footer-logos--img
+  width: 90px
+  height: auto
+  display: block
+  margin: 0 auto 10px auto
+
+.footer-logos--petereberlecom
+  border: 1px solid $color-accent
+  color: $color-accent
+  display: inline-block
+  font-size: 16px
+  margin-top: 10px
+  padding: 10px
+
+  &:hover,
+  &:visited
+    color: $color-accent
+    text-decoration: none
+    cursor: pointer
