@@ -1,0 +1,25 @@
+script: bash ./deploy.sh
+env:
+  global:
+  - GH_REF: github.com/OctoLinker/OctoLinker.github.io
+
+language: node_js
+
+node_js:
+  - "5"
+
+before_install:
+  - if [ "$TRAVIS_NODE_VERSION" = "0.10" ]; then npm install -g npm@2; fi
+  - gem update --system
+  - gem install sass
+
+  - npm install -g grunt-cli
+  - npm install
+
+  - npm install -g bower
+
+  - bower install
+
+install: npm install
+
+before_script: grunt build
