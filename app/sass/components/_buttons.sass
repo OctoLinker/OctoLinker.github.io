@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.button
+  +ce
+  background-color: $color-accent
+  border-radius: calc(58px/2)
+  border: none
+  color: white
+  display: inline-block
+  font-size: 16px
+  font-weight: 700
+  line-height: 1.7
+  min-height: 45px
+  min-width: 122px
+  padding: 0 15px
+  text-align: center
+  text-transform: uppercase
+
+
+
+.button-big
+  height: 58px
+  width: 305px
+
+
+// different states
+
+// hover
+.button
+  &:hover
+    background-color: lighten($color-accent, 10)
+    color: white
+    text-decoration: none
