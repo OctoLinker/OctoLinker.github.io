@@ -81,6 +81,18 @@ module.exports = function(grunt) {
     },
 
 
+    copy: {
+      main: {
+        files: [
+
+          // includes files within path and its sub-directories
+          {expand: true, flatten: true, src: ['app/img/**'], dest: 'dist/img/', filter: 'isFile'},
+
+        ],
+      },
+    },
+
+
     // minify and copy js
     uglify: {
       options: {
@@ -109,7 +121,8 @@ module.exports = function(grunt) {
     'clean:build',
     'sass:build',
     'htmlmin:build',
-    'uglify:build'
+    'uglify:build',
+    'copy:main'
   ]);
 
 };
