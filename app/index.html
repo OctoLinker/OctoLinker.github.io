@@ -21,13 +21,13 @@
     <nav class="navigation">
       <div class="container">
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
             <ul class="navigation-list">
               <li class="navigation-item"><a href="#about">About</a></li>
               <li class="navigation-item"><a href="#support">Support</a></li>
               <li class="navigation-item"><a href="#news">News</a></li>
             </ul>
-            <button onclick="chrome.webstore.install()" id="install-button--small" class="button right">Install</button>
+            <button onclick="chrome.webstore.install()" id="install-button--small" class="button right hidden-xs-down">Install</button>
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@
 
     <main class="container">
       <header class="row header">
-        <div class="col-xs-10 col-xs-offset-1">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
           <figure class="header-figure">
             <img src="img/OctoLinker-mascot.png" alt="" width="488">
           </figure>
@@ -53,23 +53,32 @@
 
       <section class="row content-part content-about" id="about">
         <div class="content-part--header">
-          <div class="col-xs-10 col-xs-offset-1">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
             <p class="content-navigation">About</p>
           </div>
         </div>
 
         <div class="content-part--content">
-          <div class="col-xs-10 col-xs-offset-1">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
             <h2 class="content-lead">Navigate through projects on GitHub.com efficiently with the OctoLinker browser extension.</h2>
             <p>Most projects consist of many files and third party dependencies. Files are referencing other files and / or dependencies by language specific statements like include or require. Dependencies are most likely declared in a file called manifest e.g. package.json or Gemfile. The OctoLinker browser extension makes these references clickable. No more copy and search.</p>
           </div>
         </div>
+
+        <div class="content-part--image">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <figure>
+              <img src="img/OctoLinker-video-base.png" alt="" width="780">
+            </figure>
+          </div>
+        </div>
+
       </section>
 
 
       <section class="row content-part content-support" id="support">
         <div class="content-part--header">
-          <div class="col-xs-10 col-xs-offset-1">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
             <p class="content-navigation">Support</p>
           </div>
         </div>
@@ -81,7 +90,7 @@
         </div>
 
         <div class="content-part--content">
-          <div class="col-xs-10 col-xs-offset-1">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
             <p>The OctoLinker is language agnostic and easy to extend in the latest version. It potentially can handle any programming language.</p>
             <p>Right now – just a few languages/files are supported: JavaScript, Ruby (partial), package.json, composer.json and bower.json. The plan is to expand this list further in the next weeks / months. Help me to add more languages! Check out the <a href="https://github.com/OctoLinker/browser-extension/issues?q=is%3Aopen+is%3Aissue+label%3Afeature">pending feature requests</a> on GitHub.com along with the <a href="https://github.com/octoLinker/browser-extension/blob/master/CONTRIBUTING.md">contribute</a> and <a href="https://github.com/octoLinker/browser-extension/blob/dev/DEVELOPER.md">developer</a> guide.</p>
             <p>If you encounter a problem using OctoLinker, or you would like to request an enhancement, please open an issue.</p>
@@ -90,9 +99,9 @@
       </section>
 
 
-      <section class="row content-part content-twitter" id="news">
+      <section class="row content-part content-news" id="news">
         <div class="content-part--header">
-          <div class="col-xs-10 col-xs-offset-1">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
             <p class="content-navigation">news</p>
           </div>
         </div>
@@ -104,13 +113,13 @@
         </div>
 
         <div class="content-part--content">
-          <div class="col-xs-3 col-xs-offset-1">
-            <figure class="content-twitter--img">
-              <img src="img/OctoLinker-twitter.png" alt="" class="content-twitter--img">
+          <div class="col-xs-12 col-md-3 col-md-offset-1">
+            <figure class="content-news--img">
+              <img src="img/OctoLinker-twitter.png" alt="" class="content-news--img">
             </figure>
           </div>
-          <div class="col-xs-7">
-            <p class="content-twitter--tweet">Pork chop kielbasa flank andouille bresaola steak pork chop picanha chuck. Pastrami swine ham hock ball tip jowl ground round bresaola. <a href="">@rubygems</a></p>
+          <div class="col-xs-12 col-md-7">
+            <p class="content-news--news">Pork chop kielbasa flank andouille bresaola steak pork chop picanha chuck. Pastrami swine ham hock ball tip jowl ground round bresaola. <a href="">@rubygems</a></p>
           </div>
         </div>
       </section>
@@ -119,9 +128,8 @@
 
     <footer class="footer">
       <div class="container">
-
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
             <ul class="footer-list">
               <li class="footer-list--item"><a href="#about">About</a></li>
               <li class="footer-list--item"><a href="#support">Support</a></li>
@@ -137,13 +145,13 @@
         </div>
 
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
             <div class="footer-disclaimer">
               <small>copyright 2014 - Present<br>Licensed under the MIT Licence</small>
             </div>
             <div class="footer-logos">
-              <img src="img/art-noir-logo.png" alt="" class="footer-logos--img">
-              <a class="footer-logos--petereberlecom" href="http://peter-eberle.com">peter-eberle.com</a>
+              <a href="http://www.art-noir.net" title="http://www.art-noir.net" target="_blank"><img src="img/art-noir-logo.png" alt="http://www.art-noir.net" class="footer-logos--img"></a>
+              <a href="http://peter-eberle.com" title="http://peter-eberle.com" target="_blank" class="footer-logos--petereberlecom">peter-eberle.com</a>
             </div>
           </div>
         </div>
