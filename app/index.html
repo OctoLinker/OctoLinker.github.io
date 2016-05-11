@@ -1,16 +1,17 @@
 <!doctype html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>OctoLinker</title>
-    <meta name="description" content="">
+    <meta name="description" content="OctoLinker Links together, what belongs together.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
 
     <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/jlmafbaeoofdegohdhinkhilhclaklkp">
 
-    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"></script>
   </head>
   <body>
 
@@ -21,11 +22,11 @@
     <nav class="navigation">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="col-xs-12">
             <ul class="navigation-list">
-              <li class="navigation-item"><a href="#about">About</a></li>
-              <li class="navigation-item"><a href="#support">Support</a></li>
-              <li class="navigation-item"><a href="#news">News</a></li>
+              <li class="navigation-item"><a data-scroll href="#about">About</a></li>
+              <li class="navigation-item"><a data-scroll href="#support">Support</a></li>
+              <li class="navigation-item"><a data-scroll href="#news">News</a></li>
             </ul>
             <a href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp" id="install-button--small" class="button right hidden-xs-down">Install</a>
 
@@ -34,15 +35,15 @@
       </div>
     </nav>
 
-    <main class="container">
+    <main class="main container container-small">
       <header class="row header">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <div class="col-xs-12">
           <figure class="header-figure">
             <img src="img/OctoLinker-mascot.png" alt="" width="488">
           </figure>
 
           <div class="header-content">
-            <h1 class="header-content--headline">OctoLinker &mdash; <small class="text-muted">Links together, what belongs together.</small></h1>
+            <h1 class="header-content--headline"><strong>OctoLinker</strong> &mdash; <small class="text-muted">Links together, what belongs together.</small></h1>
           	<div class="center">
               <a href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp" id="install-button" class="button button-big">Install Extension</a>
 						</div>
@@ -54,20 +55,20 @@
 
       <section class="row content-part content-about" id="about">
         <div class="content-part--header">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
-            <p class="content-navigation">About</p>
+          <div class="col-xs-12">
+            <h2 class="content-navigation">About</h2>
           </div>
         </div>
 
         <div class="content-part--content">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
-            <h2 class="content-lead">Navigate through projects on GitHub.com efficiently with the OctoLinker browser extension.</h2>
+          <div class="col-xs-12">
+            <h3 class="content-lead">Navigate through projects on GitHub.com efficiently with the OctoLinker browser extension.</h3>
             <p>Most projects consist of many files and third party dependencies. Files are referencing other files and / or dependencies by language specific statements like <code>include</code> or <code>require</code>. Dependencies are most likely declared in a file called manifest e.g. <code>package.json</code> or <code>Gemfile</code>. The OctoLinker browser extension makes these references clickable. No more copy and search.</p>
           </div>
         </div>
 
         <div class="content-part--image">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="col-xs-12">
             <figure>
               <img src="img/OctoLinker-video-base.png" alt="" width="780">
             </figure>
@@ -78,8 +79,8 @@
 
       <section class="row content-part content-support" id="support">
         <div class="content-part--header">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
-            <p class="content-navigation">Support</p>
+          <div class="col-xs-12">
+            <h2 class="content-navigation">Support</h2>
           </div>
         </div>
 
@@ -90,18 +91,18 @@
         </div>
 
         <div class="content-part--content">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="col-xs-12">
             <p>The OctoLinker is language agnostic and easy to extend in the latest version. It potentially can handle any programming language.</p>
-            <p>Right now – just a few languages/files are supported: JavaScript, Ruby (partial), package.json, composer.json and bower.json. The plan is to expand this list further in the next weeks / months. Help me to add more languages! Check out the <a href="https://github.com/OctoLinker/browser-extension/issues?q=is%3Aopen+is%3Aissue+label%3Afeature">pending feature requests</a> on GitHub.com along with the <a href="https://github.com/octoLinker/browser-extension/blob/master/CONTRIBUTING.md">contribute</a> and <a href="https://github.com/octoLinker/browser-extension/blob/dev/DEVELOPER.md">developer</a> guide.</p>
-            <p>If you encounter a problem using OctoLinker, or you would like to request an enhancement, <a href="https://github.com/OctoLinker/browser-extension/issues">please open an issue.</a></p>
+            <p>Right now – just a few languages/files are supported: JavaScript, Ruby (partial), <code>package.json</code>, <code>composer.json</code> and <code>bower.json</code>. The plan is to expand this list further in the next weeks/months. Help me to add more languages! Check out the <a href="https://github.com/OctoLinker/browser-extension/issues?q=is%3Aopen+is%3Aissue+label%3Afeature">pending feature requests</a> on GitHub.com along with the <a href="https://github.com/octoLinker/browser-extension/blob/master/CONTRIBUTING.md">contribute</a> and <a href="https://github.com/octoLinker/browser-extension/blob/dev/DEVELOPER.md">developer</a> guide.</p>
+            <p><span class="content-regular">If you encounter a problem using OctoLinker, or you would like to request an enhancement, please open an <a href="https://github.com/OctoLinker/browser-extension/issues">issue.</a></span></p>
           </div>
         </div>
       </section>
 
       <section class="row content-part content-news" id="news">
         <div class="content-part--header">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
-            <p class="content-navigation">news</p>
+          <div class="col-xs-12">
+            <h2 class="content-navigation">news</h2>
           </div>
         </div>
 
@@ -112,14 +113,14 @@
         </div>
 
         <div class="content-part--content">
-          <div class="col-xs-12 col-md-3 col-md-offset-1">
+          <div class="col-xs-12 col-md-3">
             <figure class="content-news--img">
               <img src="img/OctoLinker-twitter.png" alt="" class="content-news--img">
             </figure>
           </div>
-          <div class="col-xs-12 col-md-7">
-            <p class="content-news--news">I'm happy to announce that the upcoming major release will add support for @rubygems<a href="https://twitter.com/rubygems">@rubygems</a></p>
-            <!-- <small class="content-newsuser"></small> -->
+          <div class="col-xs-12 col-md-9">
+            <p class="content-news--news">I'm happy to announce that the upcoming major release will add support for <a href="https://twitter.com/rubygems">@rubygems</a></p>
+            <small class="content-news--user">OctoLinker @OctoLinker 7. Apr.</small>
           </div>
         </div>
       </section>
@@ -127,9 +128,9 @@
 
 
     <footer class="footer">
-      <div class="container">
+      <div class="container container-small">
         <div class="row">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="col-xs-12">
             <ul class="footer-list">
               <li class="footer-list--item"><a href="#about">About</a></li>
               <li class="footer-list--item"><a href="#support">Support</a></li>
@@ -138,20 +139,19 @@
                   <img src="img/OctoLinker-mascot-tentacle.png" alt="" width="158">
                 </figure>
               </li>
-              <li class="footer-list--item"><a href="https://github.com/OctoLinker/">Github</a></li>
-              <li class="footer-list--item"><a href="https://twitter.com/octoLinker">Twitter</a></li>
+              <li class="footer-list--item"><a href="https://github.com/OctoLinker/browser-extension">Github</a></li>
+              <li class="footer-list--item"><a href="https://twitter.com/OctoLinker">Twitter</a></li>
             </ul>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="col-xs-12">
             <div class="footer-disclaimer">
-              <small class="footer-disclaimer--small">copyright 2014 - Present<br>Licensed under the MIT Licence</small>
+              <small class="footer-disclaimer--small">copyright 2014  $mdash Present<br>Licensed under the MIT Licence</small>
             </div>
             <div class="footer-logos">
               <a href="http://www.art-noir.net" title="http://www.art-noir.net" target="_blank"><img src="img/art-noir-logo.png" alt="http://www.art-noir.net" class="footer-logos--img"></a>
-              <a href="http://peter-eberle.com" title="http://peter-eberle.com" target="_blank" class="footer-logos--petereberlecom">peter-eberle.com</a>
             </div>
           </div>
         </div>
