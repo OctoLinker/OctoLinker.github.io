@@ -4,20 +4,22 @@ body
 
 img
   display: block
-  max-width: 100%
   max-height: auto
+  max-width: 100%
 
 
 figure
   +ce
 
 
-
-
 .main
-  margin-top: 60px
   font-size: 10px
-
+  margin-top: 80px
 
 .container-small
   max-width: 778px
+  padding: 0 32px
+
++media-breakpoint-up(sm)
+  .container-small
+    padding: 0
