@@ -6,13 +6,13 @@
   height: auto
   margin: 0 auto
   vertical-align: middle
-  padding-bottom: 20px
+  padding-bottom: 40px
 
 .content-news--news
-  font-size: 22px
   color: $color-accent
-  line-height: 1.31
+  font-size: 22px
   font-weight: 300
+  line-height: 1.31
   margin-bottom: 18px
 
 .content-news--user
@@ -21,12 +21,38 @@
   font-weight: 700
   line-height: 1.42
 
-+media-breakpoint-up(sm)
+.content-news--content
+  +cf
 
+.news-image
+  +cf
+  position: relative
+  float: left
+  width: 100%
+  padding-bottom: 20px
+
+.news-tweet
+  +cf
+  float: left
+  position: relative
+  width: 100%
+
+
+
++media-breakpoint-up(sm)
   .content-news--img
     padding-bottom: 0
     width: 87px
 
+  .content-news--content
+    height: 100%
 
   .content-news--news
     font-size: 42px
+
+  .news-image
+    margin-top: 20px
+    width: 20%
+
+  .news-tweet
+    width: 80%

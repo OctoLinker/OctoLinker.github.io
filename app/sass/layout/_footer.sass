@@ -6,29 +6,45 @@
   margin-top: 150px
   margin-bottom: 150px
 
+.footer-content
+  text-align: center
+
 .footer-list
   +ce
+  +cf
+  display: inline-block
 
 .footer-list--item
-  +ce
+  color: $color-accent
   display: block
   float: left
-  padding-top: 70px
-  vertical-align: baseline
-  width: percentage(1/5)
-  text-align: center
   font-size: 12px
   font-weight: 700
+  margin-left: 26px
+  margin-right: 26px
+  padding: 70px 0 0 0
+  text-align: center
   text-transform: uppercase
-  color: $color-accent
+  vertical-align: baseline
 
   a
     color: $color-accent
 
+  &:first-child
+    margin-left: 0
+
+  &:last-child
+    margin-right: 0
 
 .footer-list--image
-  +ce
+  margin-left: 12px
+  margin-right: 12px
+  padding: 0
+  width: 158px
 
+  img
+    width: 158px
+    display: block
 
 
 .footer-disclaimer
