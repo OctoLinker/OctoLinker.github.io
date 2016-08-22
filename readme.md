@@ -1,6 +1,6 @@
-# octo-linker/www [![Build Status](https://travis-ci.org/OctoLinker/OctoLinker.github.io.svg?branch=master)](https://travis-ci.org/OctoLinker/OctoLinker.github.io)
+# OctoLinker website [![Build Status](https://travis-ci.org/OctoLinker/OctoLinker.github.io.svg?branch=source)](https://travis-ci.org/OctoLinker/OctoLinker.github.io)
 
-website for octo-linker
+Website for OctoLinker
 
 
 
