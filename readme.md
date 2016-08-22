@@ -13,8 +13,8 @@ website for octo-linker
 
 ### grunt
 
-`grunt-serve`
+`grunt serve`
 (starts the live server) watches the sass files and compiles them
 
-`grunt-build`
+`grunt build`
 builds an uploadable folder with compressed html, js and css
