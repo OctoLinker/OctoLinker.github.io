@@ -1,168 +1,144 @@
 <!doctype html>
-  <head>
-    <meta charset="utf-8">
-    <title>OctoLinker</title>
-    <meta name="description" content="OctoLinker Links together, what belongs together.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/jlmafbaeoofdegohdhinkhilhclaklkp">
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"></script>
-  </head>
-  <body>
-
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <nav class="navigation navigation-sticky">
-      <div class="navigation-small">
-        <ul class="navigation-list">
-          <li class="navigation-item"><a data-scroll href="#about">About</a></li>
-          <li class="navigation-item"><a data-scroll href="#support">Support</a></li>
-          <li class="navigation-item"><a data-scroll href="#news">News</a></li>
-        </ul>
-        <a href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp" id="install-button--small" class="button right navigation-button">Install</a>
+<head>
+  <meta charset="utf-8">
+  <title>OctoLinker</title>
+  <meta name="description" content="OctoLinker Links together, what belongs together.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/jlmafbaeoofdegohdhinkhilhclaklkp">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.4/js/tether.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.1.0/jquery.browser.min.js"></script>
+</head>
+<body>
+  <!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <nav class="navigation navigation-sticky">
+    <div class="navigation-small">
+      <ul class="navigation-list">
+        <li class="navigation-item"><a data-scroll href="#about">About</a></li>
+        <li class="navigation-item"><a data-scroll href="#support">Support</a></li>
+        <li class="navigation-item"><a data-scroll href="#news">News</a></li>
+      </ul>
+      <a data-scroll href="#install" id="install-button--small" class="button right navigation-button">Install</a>
+    </div>
+  </nav>
+  <main class="main container container-small">
+    <header class="row header">
+      <div class="col-xs-12">
+        <figure class="header-figure"><img src="img/mascot.png" alt="" width="488"></figure>
+        <div id="install" class="header-content">
+          <h1 class="header-content--headline"><strong>OctoLinker</strong> &mdash; <span class="text-muted">Links together, what belongs together.</span></h1>
+          <div class="center"><a href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp" id="install-button" class="button button-big">Install Extension</a></div>
+          <small class="header-content--small">
+            <span id="install-note">Available for</span>
+            <a href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp" class="grey-link install-chrome">Chrome</a>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/octolinker/" class="grey-link install-firefox">Firefox</a>
+            <a href="https://addons.opera.com/en/extensions/details/octolinker/" class="grey-link install-opera">Opera</a>.
+          </small>
+        </div>
       </div>
-    </nav>
-
-
-    <main class="main container container-small">
-      <header class="row header">
+    </header>
+    <section class="row content-part content-about" id="about">
+      <div class="content-part--header">
         <div class="col-xs-12">
-          <figure class="header-figure">
-            <img src="img/OctoLinker-mascot.png" alt="" width="488">
-          </figure>
-
-          <div class="header-content">
-            <h1 class="header-content--headline"><strong>OctoLinker</strong> &mdash; <span class="text-muted">Links together, what belongs together.</span></h1>
-          	<div class="center">
-              <a href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp" id="install-button" class="button button-big">Install Extension</a>
-						</div>
-						<small class="header-content--small">Google Chrome Browser Extension</small>
+          <h2 class="content-navigation">About</h2>
+        </div>
+      </div>
+      <div class="content-part--content">
+        <div class="col-xs-12">
+          <h3 class="content-lead">Navigate through projects on GitHub.com efficiently with the OctoLinker browser extension.</h3>
+          <p>Most projects consist of many files and third party dependencies. Files are referencing other files and / or dependencies by language specific statements like <code>include</code> or <code>require</code>. Dependencies are most likely declared in a file called manifest e.g. <code>package.json</code> or <code>Gemfile</code>. The OctoLinker browser extension makes these references clickable. No more copy and search.</p>
+        </div>
+      </div>
+      <div class="content-part--image">
+        <div class="col-xs-12">
+          <figure><img src="img/video-base.png" alt="" width="778"></figure>
+        </div>
+      </div>
+    </section>
+    <section class="row content-part content-support" id="support">
+      <div class="content-part--header">
+        <div class="col-xs-12">
+          <h2 class="content-navigation">Support</h2>
+        </div>
+      </div>
+      <div class="content-part--image">
+        <figure><img src="img/mascot-down.png" alt="" width="205"></figure>
+      </div>
+      <div class="content-part--content">
+        <div class="col-xs-12">
+          <p>The OctoLinker is language agnostic and can potentially handle any programming language. Right now the follwoing languages & tools are supported.</p>
+        </div>
+        <div class="col-xs-12 logos">
+            <div class="col-xs-6 col-sm-4 javascript" data-toggle="tooltip" data-placement="top" title="JavaScript"></div>
+            <div class="col-xs-6 col-sm-4 npm" data-toggle="tooltip" data-placement="top" title="npm"></div>
+            <div class="col-xs-6 col-sm-4 composer" data-toggle="tooltip" data-placement="top" title="Composer"></div>
+            <div class="col-xs-6 col-sm-4 bower" data-toggle="tooltip" data-placement="top" title="Bower"></div>
+            <div class="col-xs-6 col-sm-4 docker" data-toggle="tooltip" data-placement="top" title="Docker"></div>
+            <div class="col-xs-6 col-sm-4 nodejs" data-toggle="tooltip" data-placement="top" title="NodeJS"></div>
+            <div class="col-xs-6 col-sm-4 ruby" data-toggle="tooltip" data-placement="top" title="Ruby"></div>
+            <div class="col-xs-6 col-sm-4 homebrew" data-toggle="tooltip" data-placement="top" title="Homebrew"></div>
+            <div class="col-xs-6 col-sm-4 python" data-toggle="tooltip" data-placement="top" title="Python"></div>
+            <div class="col-xs-6 col-sm-4 vim" data-toggle="tooltip" data-placement="top" title="Vim"></div>
+            <div class="col-xs-6 col-sm-4 rubygems" data-toggle="tooltip" data-placement="top" title="RubyGems"></div>
+            <div class="col-xs-6 col-sm-4 rust" data-toggle="tooltip" data-placement="top" title="Rust"></div>
+            <div class="col-xs-6 col-sm-4 col-xs-offset-3 col-sm-offset-4 typescript" data-toggle="tooltip" data-placement="top" title="TypeScript"></div>
+        </div>
+        <div class="col-xs-12 content-regular">
+          <p class="logo-subtext">This is just a summary of the features, check out the <a href="https://github.com/OctoLinker/browser-extension#features">full list.</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="row content-part content-news" id="news">
+      <div class="content-part--header">
+        <div class="col-xs-12">
+          <h2 class="content-navigation">news</h2>
+        </div>
+      </div>
+      <div class="content-part--image">
+        <figure><img src="img/mascot-baby_fixed.png" alt="" width="123"></figure>
+      </div>
+      <div class="content-part--content">
+        <div class="content-news--content">
+          <div class="news-image">
+            <figure class="content-news--img"><img src="img/twitter.png" alt="" class="content-news--img"></figure>
           </div>
-
-        </div>
-      </header>
-
-      <section class="row content-part content-about" id="about">
-        <div class="content-part--header">
-          <div class="col-xs-12">
-            <h2 class="content-navigation">About</h2>
-          </div>
-        </div>
-
-        <div class="content-part--content">
-          <div class="col-xs-12">
-            <h3 class="content-lead">Navigate through projects on GitHub.com efficiently with the OctoLinker browser extension.</h3>
-            <p>Most projects consist of many files and third party dependencies. Files are referencing other files and / or dependencies by language specific statements like <code>include</code> or <code>require</code>. Dependencies are most likely declared in a file called manifest e.g. <code>package.json</code> or <code>Gemfile</code>. The OctoLinker browser extension makes these references clickable. No more copy and search.</p>
-          </div>
-        </div>
-
-        <div class="content-part--image">
-          <div class="col-xs-12">
-            <figure>
-              <img src="img/OctoLinker-video-base.png" alt="" width="778">
-            </figure>
-          </div>
-        </div>
-      </section>
-
-
-      <section class="row content-part content-support" id="support">
-        <div class="content-part--header">
-          <div class="col-xs-12">
-            <h2 class="content-navigation">Support</h2>
-          </div>
-        </div>
-
-        <div class="content-part--image">
-          <figure>
-            <img src="img/OctoLinker-mascot-down.png" alt="" width="205">
-          </figure>
-        </div>
-
-        <div class="content-part--content">
-          <div class="col-xs-12">
-            <p>The OctoLinker is language agnostic and easy to extend in the latest version. It potentially can handle any programming language.</p>
-            <p>Right now – just a few languages/files are supported: JavaScript, Ruby, <code>package.json</code>, <code>composer.json</code> and <code>bower.json</code>. The plan is to expand this list further in the next weeks/months. Help me to add more languages! Check out the <a href="https://github.com/OctoLinker/browser-extension/issues?q=is%3Aopen+is%3Aissue+label%3Afeature">pending feature requests</a> on GitHub.com along with the <a href="https://github.com/octoLinker/browser-extension/blob/master/CONTRIBUTING.md">contribute</a> and <a href="https://github.com/octoLinker/browser-extension/blob/dev/DEVELOPER.md">developer</a> guide.</p>
-            <p><span class="content-regular">If you encounter a problem using OctoLinker, or you would like to request an enhancement, please open an <a href="https://github.com/OctoLinker/browser-extension/issues">issue.</a></span></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="row content-part content-news" id="news">
-        <div class="content-part--header">
-          <div class="col-xs-12">
-            <h2 class="content-navigation">news</h2>
-          </div>
-        </div>
-
-        <div class="content-part--image">
-          <figure>
-            <img src="img/OctoLinker-mascot-baby_fixed.png" alt="" width="123">
-          </figure>
-        </div>
-
-        <div class="content-part--content">
-
-          <div class="content-news--content">
-            <div class="news-image">
-              <figure class="content-news--img">
-                <img src="img/OctoLinker-twitter.png" alt="" class="content-news--img">
-              </figure>
-            </div>
-
-            <div class="news-tweet">
-              <p class="content-news--news">I'm happy to announce that the upcoming major release will add support for <a href="https://twitter.com/rubygems">@rubygems</a></p>
-              <small class="content-news--user">OctoLinker @OctoLinker 7. Apr.</small>
-            </div>
-          </div>
-
-        </div>
-      </section>
-    </main>
-
-
-    <footer class="footer">
-      <div class="container container-small">
-        <div class="footer-content">
-          <ul class="footer-list">
-            <li class="footer-list--item"><a href="#about">About</a></li>
-            <li class="footer-list--item"><a href="#support">Support</a></li>
-            <li class="footer-list--item footer-list--image">
-              <figure>
-                <img src="img/OctoLinker-mascot-tentacle.png" alt="" width="158">
-              </figure>
-            </li>
-            <li class="footer-list--item"><a href="https://github.com/OctoLinker/browser-extension">Github</a></li>
-            <li class="footer-list--item"><a href="https://twitter.com/OctoLinker">Twitter</a></li>
-          </ul>
-
-          <div class="footer-disclaimer">
-            <small class="footer-disclaimer--small">copyright 2014 &mdash; Present Stefan Buck<br>Licensed under the MIT Licence</small>
-          </div>
-          <div class="footer-logos">
-            <a href="http://www.art-noir.net" title="http://www.art-noir.net" target="_blank"><img src="img/art-noir-logo.png" alt="http://www.art-noir.net" class="footer-logos--img"></a>
+          <div class="news-tweet">
+            <p class="content-news--news">I'm happy to announce that the upcoming major release will add support for <a href="https://twitter.com/rubygems">@rubygems</a></p>
+            <small class="content-news--user">OctoLinker <a href="https://twitter.com/OctoLinker/" class="twitter-link">@OctoLinker</a> <a href="https://twitter.com/OctoLinker/status/745362641628041216" class="twitter-link">7. Apr.</a></small>
           </div>
         </div>
       </div>
-    </footer>
-
-
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-40473036-14','auto');ga('send','pageview');
-    </script>
-    <script src="js/main.js"></script>
-
-  </body>
-</html>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container container-small">
+      <div class="footer-content">
+        <ul class="footer-list">
+          <li class="footer-list--item"><a data-scroll href="#about">About</a></li>
+          <li class="footer-list--item"><a data-scroll href="#support">Support</a></li>
+          <li class="footer-list--item footer-list--image">
+            <figure><img src="img/mascot-tentacle.png" alt="" width="158"></figure>
+          </li>
+          <li class="footer-list--item"><a href="https://github.com/OctoLinker/browser-extension">Github</a></li>
+          <li class="footer-list--item"><a href="https://twitter.com/OctoLinker">Twitter</a></li>
+        </ul>
+        <div class="footer-disclaimer"><small class="footer-disclaimer--small">copyright 2014 &mdash; Present Stefan Buck<br>Licensed under the MIT Licence</small></div>
+        <div class="footer-logos"><a href="http://www.art-noir.net" title="http://www.art-noir.net" target="_blank"><img src="img/art-noir-logo.png" alt="http://www.art-noir.net" class="footer-logos--img"></a></div>
+      </div>
+    </div>
+  </footer>
+  <script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-40473036-14','auto');ga('send','pageview');
+  </script><script src="js/main.js"></script>
+</body>

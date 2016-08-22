@@ -21,7 +21,6 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options:{
-          loadPath: 'bower_components/',
           style: 'expanded'
         },
         files: {

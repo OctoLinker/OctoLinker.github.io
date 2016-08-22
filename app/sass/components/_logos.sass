@@ -1,0 +1,22 @@
+.logos
+  margin: 20px 0
+
+  > div
+    height: 120px
+    margin-top: 26px
+    margin-bottom: 26px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+
+.logo-subtext
+  text-align: center
+
+
+
+$logos: bower, composer, docker, homebrew, javascript, nodejs, npm, python, ruby, rubygems, rust, rust, typescript, vim
+
+
+@each $logos in $logos
+ .#{$logos}
+   background-image: url('../img/#{$logos}.png')
