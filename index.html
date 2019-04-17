@@ -1,7 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>OctoLinker – Links together, what belongs together.</title>
   <meta name="description"
     content="Browser extension for GitHub which turns language-specific module-loading statements like include, require or import into links.">
@@ -16,171 +17,1129 @@
     content="Browser extension for GitHub which turns language-specific module-loading statements like include, require or import into links.">
   <meta property="og:image" content="https://octolinker.github.io/img/octolinker-og-image.jpg">
   <meta name="twitter:image" content="https://octolinker.github.io/img/octolinker-og-image.jpg">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="image_src" href="https://octolinker.github.io/img/octolinker-og-image.jpg">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/main-v1.css">
-  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/jlmafbaeoofdegohdhinkhilhclaklkp">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.4/js/tether.min.js"></script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.1.0/jquery.browser.min.js"></script>
+  <style>
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+    html {
+      line-height: 1.15;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: .67em 0;
+    }
+
+    a {
+      background-color: transparent;
+    }
+
+    strong {
+      font-weight: bolder;
+    }
+
+    code {
+      font-family: monospace, monospace;
+      font-size: 1em;
+    }
+
+    img {
+      border-style: none;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    :after,
+    :before {
+      box-sizing: inherit;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    @media only screen and (min-width:768px) {
+      .container {
+        max-width: 940px;
+        padding: 0 30px;
+      }
+    }
+
+    .section {
+      margin: 60px 0;
+      padding: 20px 0;
+      text-align: left;
+    }
+
+    @media only screen and (min-width:768px) {
+      .section {
+        text-align: center;
+      }
+    }
+
+    .how-it-works-boxes {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .how-it-works-icon {
+      position: relative;
+      top: 6px;
+      float: right;
+      margin-right: 20px;
+    }
+
+    .how-it-works-box {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex: 1 1;
+    }
+
+    .how-it-works-box {
+      text-align: left;
+    }
+
+    @media only screen and (min-width:768px) {
+      .how-it-works-box {
+        margin: 0 10px;
+      }
+
+      .how-it-works-box:first-child {
+        margin-left: 0;
+      }
+
+      .how-it-works-box:last-child {
+        margin-right: 0;
+      }
+
+      .how-it-works-boxes {
+        flex-direction: row;
+      }
+    }
+
+    html {
+      font-family: 'Oxygen', Oxygen-Sans, Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.54rem;
+      color: #373a3c;
+    }
+
+    @media only screen and (min-width:768px) {
+      html {
+        font-size: 16px;
+      }
+    }
+
+    code {
+      font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+      font-variant: none;
+      font-feature-settings: 'liga'0, 'clig'0, 'calt'0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fd4eff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1,
+    h3 {
+      font-weight: 700;
+      color: #373b49;
+    }
+
+    h1 {
+      font-size: 1.45rem;
+      margin-top: 0;
+      padding-top: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-top: 0;
+    }
+
+    @media only screen and (min-width:768px) {
+      h1 {
+        font-size: 2.05rem;
+        line-height: 2.1rem;
+      }
+
+      body {
+        font-weight: 300;
+      }
+    }
+
+    .button {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 46px;
+      display: inline-block;
+      box-sizing: border-box;
+      height: 46px;
+      padding: 0 22px;
+      cursor: pointer;
+      text-transform: uppercase;
+      color: #fff;
+      border-radius: calc(46px/2);
+      background-color: #1c1f2b;
+    }
+
+    .button:hover {
+      text-decoration: none;
+    }
+
+    @media only screen and (min-width:768px) {
+      .button {
+        line-height: 58px;
+        height: 58px;
+        padding: 0 26px;
+        border-radius: calc(58px/2);
+      }
+    }
+
+    .button.compact {
+      line-height: 45px;
+      height: 45px;
+      border-radius: calc(45px/2);
+    }
+
+    .button:hover {
+      background: #30354a;
+    }
+
+    .nav {
+      padding-top: 27px;
+      padding-bottom: 15px;
+    }
+
+    a.nav-item {
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0 19px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #1c1f2b;
+    }
+
+    .nav-item:hover {
+      border-bottom: 2px solid #1c1f2b;
+    }
+
+    .nav-right {
+      float: right;
+    }
+
+    .nav-menu-wrapper {
+      display: inline-block;
+      margin-top: 9px;
+    }
+
+    .hero {
+      overflow: hidden;
+      margin: 140px 0;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      line-height: 1.6rem;
+      max-width: 350px;
+      margin: 1em auto;
+      color: #808493;
+    }
+
+    .hero strong {
+      color: #373a3c;
+    }
+
+    .hero .button {
+      margin-top: 8px;
+      margin-right: 10px;
+    }
+
+    @media only screen and (min-width:768px) {
+      .hero {
+        margin: 80px 0;
+      }
+
+      .hero p {
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 2.1rem;
+        max-width: 550px;
+        margin: 0 auto;
+      }
+
+      .hero .button {
+        margin: 20px 10px;
+      }
+    }
+
+    @media only screen and (max-width:767px) {
+      .hero {
+        margin: 20px 0;
+      }
+    }
+
+    .floating-number {
+      font-size: 15rem;
+      font-weight: 900;
+      position: absolute;
+      z-index: 10;
+      top: 50px;
+      left: 0;
+      color: #fff;
+    }
+
+    @media only screen and (min-width:768px) {
+      .how-it-works-box {
+        flex-direction: column;
+      }
+
+      .floating-number {
+        position: relative;
+        top: 160px;
+        left: 0;
+      }
+    }
+
+    .how-it-works-description {
+      z-index: 20;
+    }
+
+    .screenshot {
+      width: 100%;
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    .screenshot>img {
+      border-radius: 5px;
+      box-shadow: 0 3px 16px rgba(0, 0, 0, .2);
+    }
+
+    .feature-boxes {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    @media only screen and (min-width:768px) {
+      .feature-boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .feature-box {
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 10px 0;
+    }
+
+    @media only screen and (min-width:768px) {
+      .feature-box {
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 50%;
+        padding: 20px 10px;
+        text-align: left;
+      }
+    }
+
+    .language-boxes {
+      display: flex;
+      flex-direction: row;
+      max-width: 660px;
+      margin: 0 -10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media only screen and (min-width:768px) {
+      .language-boxes {
+        margin: 0 auto;
+        justify-content: center;
+      }
+    }
+
+    .language-box-container {
+      margin: 7px;
+    }
+
+    .language-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 104px;
+      height: 104px;
+      padding: 15px 10px;
+      border-radius: 2px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 5px 0 rgba(209, 209, 252, .4);
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media only screen and (min-width:768px) {
+      .language-box {
+        width: 113px;
+        height: 113px;
+        flex: 1 1;
+      }
+    }
+
+    .language-icon {
+      top: 0;
+      display: inline-flex;
+      width: 50px;
+      height: 50px;
+      text-align: left;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    .language-name {
+      font-size: 12px;
+      font-weight: 500;
+      position: relative;
+      top: 5px;
+    }
+
+    @media only screen and (min-width:768px) {
+      .language-name {
+        font-size: 14px;
+      }
+    }
+
+    @media only screen and (min-width:768px) {
+      .customers p {
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 2.2rem;
+      }
+    }
+
+    .customers p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-bg {
+      background: #f7f7f7;
+    }
+
+    .get-started {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    .get-started {
+      margin-bottom: 0;
+    }
+
+    .get-started p {
+      max-width: 600px;
+      margin: 15px auto 20px;
+    }
+
+    .footer {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .footer-logo {
+      margin: 20px 0 50px;
+      text-align: center;
+    }
+
+    .footer-image {
+      margin-bottom: 30px;
+    }
+
+    .footer a {
+      color: #373a3a;
+    }
+
+    @media only screen and (max-width:767px) {
+      .footer {
+        max-width: 200px;
+        margin-bottom: 50px;
+      }
+
+      .footer a {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .footer-logo {
+        margin-bottom: 30px;
+        text-align: left;
+      }
+    }
+
+    @media only screen and (min-width:768px) {
+      .footer {
+        margin: 0;
+      }
+
+      .footer a {
+        display: inline;
+        margin-right: 0;
+        margin-left: 20px;
+      }
+    }
+
+    .clearfix:after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+
+    .tweet-boxes {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    @media only screen and (min-width:768px) {
+      .tweet-boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .tweet-box {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    @media only screen and (min-width:768px) {
+      .tweet-box {
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 10px;
+        text-align: left;
+      }
+    }
+
+    .sponsors p {
+      line-height: 1.6em;
+    }
+
+    .sponsor-boxes {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    @media only screen and (min-width:768px) {
+      .sponsor-boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .sponsor-box {
+      display: block;
+      padding: 10px 0;
+    }
+
+    @media only screen and (min-width:768px) {
+      .sponsor-box {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 50%;
+        padding: 20px 10px;
+        text-align: left;
+      }
+    }
+
+    .sponsor-box a {
+      transition: all 180ms ease-in-out;
+    }
+
+    .sponsor-box a:hover {
+      transform: scale(1.05);
+    }
+
+    .sponsor-logo {
+      width: 120px;
+      height: 120px;
+      margin: auto;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-size: contain;
+    }
+
+    @media only screen and (min-width:768px) {
+      .sponsor-logo {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media only screen and (max-width:768px) {
+      .mascot {
+        text-align: center;
+      }
+    }
+
+    code {
+      font-size: 85%;
+      margin: 0;
+      padding: .2em .4em;
+      border-radius: 3px;
+      background-color: rgba(27, 31, 35, .05);
+    }
+
+    .nav-box {
+      box-shadow: 0 0 3px 0 rgba(40, 40, 40, .4);
+    }
+
+    .backers {
+      margin: 20px 0 0 20px;
+    }
+
+    .backers a {
+      display: inline-block;
+      overflow: hidden;
+      height: 74px;
+      height: 74px;
+      margin-left: -20px;
+      padding: 3px;
+      border: 2px solid #7d7c7c;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 3px 3px 0 rgba(40, 40, 40, .4);
+    }
+
+    .backers a:last-child {
+      border-color: #fd4eff;
+    }
+
+    .backers a:last-child:hover {
+      transform: translate3d(0, 0, 0);
+      animation: shake .82s cubic-bezier(.36, .07, .19, .97) both;
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+
+    @keyframes shake {
+
+      10%,
+      90% {
+        transform: translate3d(0, -1px, 0);
+      }
+
+      20%,
+      80% {
+        transform: translate3d(0, 2px, 0);
+      }
+
+      30%,
+      50%,
+      70% {
+        transform: translate3d(0, -4px, 0);
+      }
+
+      40%,
+      60% {
+        transform: translate3d(0, 4px, 0);
+      }
+    }
+
+    .backers a:last-child img {
+      border-radius: 50%;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media only screen and (max-width:768px) {
+      .hide-on-mobile {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width:768px) {
+      .install-count {
+        padding-left: 1em;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!--[if lt IE 8]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-  <nav class="navigation navigation-sticky hide-on-mobile">
-    <div class="navigation-small">
-      <ul class="navigation-list">
-        <li class="navigation-item"><a data-scroll href="#about">About</a></li>
-        <li class="navigation-item"><a data-scroll href="#features">Features</a></li>
-        <li class="navigation-item"><a data-scroll href="https://opencollective.com/octolinker">open collective</a></li>
-      </ul>
-      
-      <a data-scroll href="#install" id="install-button--small" class="button right navigation-button">Install</a>
-      <a class="github right" href="https://github.com/OctoLinker/OctoLinker"><svg width="32" height="32" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="#1B1F23"/>
-        </svg></a>
+  <div class="nav-box hide-on-mobile">
+    <div class="container clearfix">
+      <nav class="nav clearfix">
+        <div class="nav-menu-wrapper">
+          <a class="nav-item" href="#how-it-works">How it works</a>
+          <a class="nav-item" href="#features">Features</a>
+          <a class="nav-item" href="#languages">Languages</a>
+          <a class="nav-item" href="#sponsors">Sponsors</a>
+        </div>
+
+        <div class="nav-right">
+          <a class="button compact" href="#install"><span>Install</span></a>
+        </div>
+      </nav>
     </div>
-  </nav>
-  <main class="main container container-small">
-    <header class="row header">
-      <div class="col-xs-12">
-        <div class="hero_mascot"></div>
-        <div id="install" class="header-content">
-          <h1 class="header-content--headline"><strong>OctoLinker</strong> &mdash; <span class="text-muted">Links
-              together, what belongs together.</span></h1>
-          <div class="center"><a
-              href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp"
-              id="install-button" class="button button-big">Install Extension</a></div><small
-            class="header-content--small"><span id="install-note">Available for</span> <a
-              href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp"
-              class="grey-link install-chrome">Chrome</a> <a
-              href="https://addons.mozilla.org/en-US/firefox/addon/octolinker/"
-              class="grey-link install-firefox">Firefox</a> <a
-              href="https://addons.opera.com/en/extensions/details/octolinker/"
-              class="grey-link install-opera">Opera</a>.</small>
-        </div>
+  </div>
+  <div class="main-background">
+    <div class="container clearfix">
+      <div class="section hero">
+        <img src="img/mascot.png" width="200">
+        <h1>Link dependencies on GitHub.com</h1>
+        <p>It turns language-specific module-loading statements like <code>include</code> <code>require</code> or
+          <code>import</code> into links.</p>
+        <p><a class="button primary" href="#install">Install now</a><a class="button" href="#how-it-works">Learn how it
+            works</a></p>
+        <p>
+          <strong>OctoLinker</strong> — <span class="text-muted">Links
+            together, what belongs together.</span>
+        </p>
       </div>
-    </header>
-    <section class="row content-part content-about" id="about">
-      <div class="content-part--header">
-        <div class="col-xs-12">
-          <h2 class="content-navigation">About</h2>
-        </div>
+    </div>
+
+    <div class="container hide-on-mobile">
+      <div class="screenshot">
+        <img src="img/screenshot.png" width="100%">
       </div>
-      <div class="content-part--content">
-        <div class="col-xs-12">
-          <h3 class="content-lead">What is OctoLinker?</h3>
-          <p>OctoLinker is a browser extension for Chrome, Firefox and Opera which allows you to navigate through code
-            on GitHub more efficiently.</p>
-          <p>It turns language-specific module-loading statements like <code>include</code>, <code>require</code> or
-            <code>import</code> into links. Depending on the language it will either redirect you to the referenced file
-            or to an external website like a manual page or another service.</p>
-        </div>
-      </div>
-      <div class="content-part--video hide-on-mobile">
-        <div class="col-xs-12">
-          <figure><iframe class="video-frame" width="778" height="438"
-              src="//www.youtube.com/embed/2xJHuw-zvTs?autoplay=0&showinfo=0&controls=0" frameborder="0"
-              allowfullscreen=""></iframe></figure>
-        </div>
-      </div>
-    </section>
-    <section class="row content-part content-support" id="features">
-      <div class="content-part--header">
-        <div class="col-xs-12">
-          <h2 class="content-navigation">Features</h2>
-        </div>
-      </div>
-      <div class="content-part--image">
-        <figure><img src="img/mascot-down.png" alt="" width="205"></figure>
-      </div>
-      <div class="content-part--content">
-        <div class="col-xs-12">
-          <p>OctoLinker is language agnostic and can potentially handle any programming language. Right now the
-            following languages & tools are supported.</p>
-        </div>
-        <div class="col-xs-12 logos">
-          <div class="col-xs-4 col-sm-2 javascript" data-toggle="tooltip" data-placement="top" title="JavaScript"></div>
-          <div class="col-xs-4 col-sm-2 npm" data-toggle="tooltip" data-placement="top" title="npm"></div>
-          <div class="col-xs-4 col-sm-2 composer" data-toggle="tooltip" data-placement="top" title="Composer"></div>
-          <div class="col-xs-4 col-sm-2 java" data-toggle="tooltip" data-placement="top" title="Java"></div>
-          <div class="col-xs-4 col-sm-2 python" data-toggle="tooltip" data-placement="top" title="Python"></div>
-          <div class="col-xs-4 col-sm-2 docker" data-toggle="tooltip" data-placement="top" title="Docker"></div>
-          <div class="col-xs-4 col-sm-2 ruby" data-toggle="tooltip" data-placement="top" title="Ruby"></div>
-          <div class="col-xs-4 col-sm-2 nodejs" data-toggle="tooltip" data-placement="top" title="NodeJS"></div>
-          <div class="col-xs-4 col-sm-2 homebrew" data-toggle="tooltip" data-placement="top" title="Homebrew"></div>
-          <div class="col-xs-4 col-sm-2 vim" data-toggle="tooltip" data-placement="top" title="Vim"></div>
-          <div class="col-xs-4 col-sm-2 rubygems" data-toggle="tooltip" data-placement="top" title="RubyGems"></div>
-          <div class="col-xs-4 col-sm-2 rust" data-toggle="tooltip" data-placement="top" title="Rust"></div>
-          <div class="col-xs-4 col-sm-2 go" data-toggle="tooltip" data-placement="top" title="Go"></div>
-          <div class="col-xs-4 col-sm-2 typescript" data-toggle="tooltip" data-placement="top" title="TypeScript"></div>
-          <div class="col-xs-4 col-sm-2 html" data-toggle="tooltip" data-placement="top" title="HTML"></div>
-          <div class="col-xs-4 col-sm-2 css" data-toggle="tooltip" data-placement="top" title="CSS"></div>
-          <div class="col-xs-4 col-sm-2 haskell" data-toggle="tooltip" data-placement="top" title="Haskell"></div>
-          <div class="col-xs-4 col-sm-2 less" data-toggle="tooltip" data-placement="top" title="less"></div>
-          <div class="col-xs-4 col-sm-2 bower" data-toggle="tooltip" data-placement="top" title="Bower"></div>
-          <div class="col-xs-4 col-sm-2 sass " data-toggle="tooltip"
-            data-placement="top" title="Sass"></div>
-        </div>
-      </div>
-    </section>
-    <section class="row content-part content-news hide-on-mobile" id="news">
-      <div class="content-part--header">
-        <div class="col-xs-12">
-          <h2 class="content-navigation">news</h2>
-        </div>
-      </div>
-      <div class="content-part--image">
-        <figure><img src="img/mascot-baby_fixed.png" alt="" width="123"></figure>
-      </div>
-      <div class="content-part--content">
-        <div class="content-news--content">
-          <div class="news-image">
-            <figure class="content-news--img"><img src="img/twitter.png" alt="" class="content-news--img"></figure>
-          </div>
-          <div class="news-tweet"><a class="twitter-timeline" data-width="500" data-height="500" data-theme="light"
-              data-link-color="#ff4fff" href="https://twitter.com/OctoLinker">Tweets by OctoLinker</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div class="section-bg">
+
+      <div class="container">
+
+        <div class="section how-it-works"><a id="how-it-works"></a>
+          <h1>How it works</h1>
+          <div class="how-it-works-boxes">
+            <div class="how-it-works-box">
+              <div class="how-it-works-description">
+                <h3>1. Read</h3>
+                <p>OctoLinker reads the source code you're currently viewing either straight from the browser or in some
+                  cases using the GitHub API.
+                </p>
+                <p>
+                  No source code will be ever send to a server! Your source code stays in your
+                  browser.</p>
+              </div>
+            </div>
+            <div class="how-it-works-box">
+              <div class="how-it-works-description">
+                <h3>2. Find</h3>
+                <p>Based on the file type, OctoLinker invokes a plugin which then executes a regular expression on the
+                  source code to find import statements.
+                </p>
+              </div>
+            </div>
+            <div class="how-it-works-box">
+              <div class="how-it-works-description">
+                <h3>3. Resolve</h3>
+                <p>Relative file references are resolved through the GitHub tree API in your browser. External
+                  dependencies are resolved using the <a href="https://octolinker.now.sh/">OctoLinker API</a>. </p>
+                <p>Only the
+                  name of a dependency along with the registry type is send to this service.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container container-small">
-      <div class="footer-content">
-        <ul class="footer-list">
-          <li class="footer-list--item hide-on-mobile"><a data-scroll href="#about">About</a></li>
-          <li class="footer-list--item hide-on-mobile"><a data-scroll href="#support">Support</a></li>
-          <li class="footer-list--item footer-list--image hide-on-mobile">
-            <figure><img src="img/mascot-tentacle.png" alt="" width="158"></figure>
-          </li>
-          <li class="footer-list--item"><a href="https://github.com/OctoLinker/OctoLinker">Github</a></li>
-          <li class="footer-list--item"><a href="https://twitter.com/OctoLinker">Twitter</a></li>
-        </ul>
-        <div class="footer-disclaimer"><small class="footer-disclaimer--small">copyright 2014 &mdash; Present Stefan
-            Buck<br>Licensed under the MIT Licence</small></div>
-        <div class="footer-logos"><a href="http://www.art-noir.net" title="http://www.art-noir.net" target="_blank"><img
-              src="img/art-noir-logo.png" alt="http://www.art-noir.net" class="footer-logos--img"></a></div>
+    </div>
+  </div>
+  <div>
+    <div class="container">
+      <div class="section">
+        <h1 id="features">Features</h1>
+        <div class="mascot">
+
+          <img src="img/mascot-down.png" alt="" width="205">
+        </div>
+
+        <div class="feature-boxes">
+          <div class="feature-box">
+            <div class="feature-description">
+              <h3>Relative files</h3>
+              <p>Navigate through repositories faster than ever with a single click.</p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-description">
+              <h3>Dependencies</h3>
+              <p>Discover your dependencies with ease. OctoLinker converts your dependencies into clickable links in any
+                source or manifest files such as <code>package.json</code> <code>composer.json</code>
+                <code>Gemfile</code> <code>requirements.txt</code> and a few more.
+              </p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-description">
+              <h3>Pull Request</h3>
+              <p>Code review made easy. Check out new dependencies with a single click or jump to a relative file.</p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-description">
+              <h3>API Docs</h3>
+              <p>Don't remember the signature of core library method? No worries, OctoLinker keeps you covered by
+                linking to API docs sucha as <a href="https://nodejs.org/docs">nodejs.org/en/docs</a> <a
+                  href="https://docs.python.org">docs.python.org</a> <a
+                  href="https://docs.oracle.com">docs.oracle.com</a> or <a href="https://rubygems.org">rubygems.org</a>.
+              </p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-description">
+              <h3>Readme and comments</h3>
+              <p>OctoLinker tries to link even import statements in code snippets found in any MarkDown file, Issues,
+                Pull Request or Pull Request / issue comments.</p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-description">
+              <h3>Gist support</h3>
+              <p>All this works on GitHub gists too.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
-  <script>(function (b, o, i, l, e, r) {
-    b.GoogleAnalyticsObject = l; b[l] || (b[l] =
-      function () {(b[l].q = b[l].q || []).push(arguments)}); b[l].l = +new Date;
-      e = o.createElement(i); r = o.getElementsByTagName(i)[0];
-      e.src = '//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-40473036-14', 'auto'); ga('send', 'pageview');</script>
-  <script src="js/main.js"></script>
+    <div class="section-bg">
+      <div class="container">
+        <div class="section languages"><a id="languages"></a>
+          <h1>Supported languages</h1>
+          <div class="language-boxes">
+
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/bower.png)"></div>
+                <div class="language-name">bower</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/composer.png)"></div>
+                <div class="language-name">composer</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/css.png)"></div>
+                <div class="language-name">css</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/docker.png)"></div>
+                <div class="language-name">docker</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/go.png)"></div>
+                <div class="language-name">go</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/haskell.png)"></div>
+                <div class="language-name">Haskell</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/homebrew.png)"></div>
+                <div class="language-name">Homebrew</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/html.png)"></div>
+                <div class="language-name">HTML</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/java.png)"></div>
+                <div class="language-name">Java</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/javascript.png)"></div>
+                <div class="language-name">JavaScript</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/less.png)"></div>
+                <div class="language-name">less</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/nodejs.png)"></div>
+                <div class="language-name">nodejs</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/npm.png)"></div>
+                <div class="language-name">npm</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/python.png)"></div>
+                <div class="language-name">python</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/ruby.png)"></div>
+                <div class="language-name">Ruby</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/rubygems.png)"></div>
+                <div class="language-name">RubyGems</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/rust.png)"></div>
+                <div class="language-name">Rust</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/sass.png)"></div>
+                <div class="language-name">Sass</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/typescript.png)"></div>
+                <div class="language-name">TypeScript</div>
+              </div>
+            </div>
+            <div class="language-box-container">
+              <div class="language-box">
+                <div class="language-icon" style="background-image: url(img/vim.png)"></div>
+                <div class="language-name">Vim</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container">
+        <div class="section customers">
+          <div class="mascot">
+
+            <img src="img/mascot-baby_fixed.png" alt="" width="123">
+          </div>
+          <h1>Community voice</h1>
+          <p>OctoLinker is trusted by over 20,000 developers!</p>
+          <div class="tweet-boxes">
+            <div class="tweet-box">
+              <blockquote class="twitter-tweet" data-cards="hidden" data-lang="de">
+                <p lang="en" dir="ltr">Octo Linker links up dependencies, require() &amp; ES2015 imports across packages
+                  on GitHub <a href="https://t.co/vhoZyyINi2">https://t.co/vhoZyyINi2</a> 👌 <a
+                    href="https://t.co/LcB7uMoVPI">pic.twitter.com/LcB7uMoVPI</p>
+                </p>&mdash; Addy Osmani (@addyosmani)
+                <a href="https://twitter.com/addyosmani/status/682002966669180928?ref_src=twsrc%5Etfw">30. Dezember
+                  2015</a>
+              </blockquote>
+            </div>
+            <div class="tweet-box">
+              <blockquote class="twitter-tweet" data-cards="hidden" data-lang="de">
+                <p lang="en" dir="ltr">I&#39;m generally skeptical of Chrome plugins, but OctoLinker&#39;s been really
+                  handy. Makes it much easier to navigate projects on GitHub. <a
+                    href="https://t.co/CfZD2Awe8O">https://t.co/CfZD2Awe8O</a></p>&mdash; Daniel O&#39;Connor (@_danoc)
+                <a href="https://twitter.com/_danoc/status/1093640620692783104?ref_src=twsrc%5Etfw">7. Februar 2019</a>
+              </blockquote>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="tweet-box">
+              <blockquote class="twitter-tweet" data-cards="hidden" data-lang="de">
+                <p lang="en" dir="ltr">OctoLinker is probably the most valuable tool I&#39;ve added to my developer belt
+                  in the last five years. Lowering friction to read open source code gives me superpowers <a
+                    href="https://t.co/7eE7pNopRN">https://t.co/7eE7pNopRN</a></p>&mdash; Josh Duff (@TehShrike) <a
+                  href="https://twitter.com/TehShrike/status/1049322121913094150?ref_src=twsrc%5Etfw">8. Oktober
+                  2018</a>
+              </blockquote>
+            </div>
+            <div class="tweet-box hide-on-mobile">
+              <blockquote class="twitter-tweet" data-conversation="none" data-lang="de">
+                <p lang="en" dir="ltr">Octolinker is crucial improvement, being able to jump around files without
+                  searching for them makes analysing code and dependencies a breeze</p>&mdash; Pete Nykänen (@pete_tnt)
+                <a href="https://twitter.com/pete_tnt/status/1107037105207812096?ref_src=twsrc%5Etfw">16. März 2019</a>
+              </blockquote>
+            </div>
+            <div class="tweet-box hide-on-mobile">
+              <blockquote class="twitter-tweet" data-conversation="none" data-lang="de">
+                <p lang="en" dir="ltr">Navigating and understanding a new codebase becomes so easy. Thanks <a
+                    href="https://twitter.com/OctoLinker?ref_src=twsrc%5Etfw">@OctoLinker</a> for this! ❤</p>&mdash;
+                Nikhita Raghunath (@TheNikhita) <a
+                  href="https://twitter.com/TheNikhita/status/832295220175892481?ref_src=twsrc%5Etfw">16. Februar
+                  2017</a>
+              </blockquote>
+            </div>
+            <div class="tweet-box hide-on-mobile">
+              <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
+                <p lang="en" dir="ltr">How did I go all these years without coming across <a
+                    href="https://twitter.com/OctoLinker?ref_src=twsrc%5Etfw">@OctoLinker</a> extension for GitHub?
+                  Essential. <a href="https://t.co/3wT8rwaPch">https://t.co/3wT8rwaPch</a></p>&mdash; Steve Wu
+                (@stevenwu) <a
+                  href="https://twitter.com/stevenwu/status/1090020371619766272?ref_src=twsrc%5Etfw">January 28,
+                  2019</a>
+              </blockquote>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="container sponsors">
+        <div class="section"><a id="sponsors"></a>
+          <h1>Sponsors</h1>
+
+          <div class="sponsor-boxes">
+            <div class="sponsor-box">
+              <a href="https://zeit.co">
+                <div class="sponsor-logo"
+                  style="background-color: #000; background-image: url(img/zeit.png); background-position-y: 54%; background-size: 65%">
+                </div>
+              </a>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero et facere voluptates rerum, repudiandae
+                ducimus in nostrum nesciunt beatae est veniam odio possimus vel aliquid magnam consequatur quam.</p>
+            </div>
+
+            <div class="sponsor-box">
+              <a href="https://redisgreen.net">
+
+                <div class="sponsor-logo"
+                  style="background-color: #5f8834; background-image: url(img/redisgreen.png); background-position-y: 53%; background-size: 80%">
+                </div>
+              </a>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero et facere voluptates rerum, repudiandae
+                ducimus in nostrum nesciunt beatae est veniam odio possimus vel aliquid magnam consequatur quam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="container">
+        <div class="section customers">
+          <h1>Supporters</h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eveniet, possimus rem earum at.
+          <div class="backers">
+            <a href="https://opencollective.com/octolinker/backer/0/website" target="_blank"><img
+                src="https://opencollective.com/octolinker/backer/0/avatar.svg" width="64"></a>
+            <a href="https://opencollective.com/octolinker/backer/1/website" target="_blank"><img
+                src="https://opencollective.com/octolinker/backer/1/avatar.svg" width="64"></a>
+            <a href="https://opencollective.com/octolinker" target="_blank"><img src="img/backer.png" width="64"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-bg">
+      <div class="container">
+        <div class="section get-started"><a id="install"></a>
+          <h1>Install OctoLinker</h1>
+          <p>OctoLinker is a browser extension and available on <a
+              href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp"
+              rel="nofollow">
+              <nobr>Chrome Web Store</nobr>
+            </a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/octolinker/" rel="nofollow">
+              <nobr>Mozilla Add-ons Store</nobr>
+            </a> or <a href="https://addons.opera.com/en/extensions/details/octolinker/" rel="nofollow"></obr>Opera
+              Add-ons Store</nobr></a><br>Install and enhance your GitHub experience.</p>
+          <a class="button primary js-install-chrome hidden"
+            href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp">Install for
+            Google Chrome</a>
+          <a class="button primary js-install-firefox hidden"
+            href="https://addons.mozilla.org/en-US/firefox/addon/octolinker/">Install for Mozilla Firefox</a>
+          <a class="button primary js-install-opera hidden"
+            href="https://addons.opera.com/en/extensions/details/octolinker/">Install for Opera</a>
+          <div class="install-count">
+            <small>Trusted by over 20,000 developers</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="section footer">
+        <div class="footer-image">
+          <img src="img/mascot-tentacle.png" width="158" />
+        </div>
+        <span>© OctoLinker 2019</span>
+        <a href="https://twitter.com/octolinker">Twitter</a><a
+          href="https://github.com/octolinker/octolinker">GitHub</a>
+        <div class="footer-logo"><a href="https://www.art-noir.net" title="https://www.art-noir.net"
+            target="_blank"><img src="img/art-noir-logo.png" alt="https://www.art-noir.net" width="90"></a></div>
+      </div>
+    </div>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://unpkg.com/bowser@1.9.4/bowser.min.js"></script>
+    <script>
+      const supported = ["chrome", "firefox", "opera"];
+      const browserName = bowser.name.toLowerCase();
+
+      if (supported.includes(browserName)) {
+        document
+          .querySelector(`.js-install-${browserName}`)
+          .classList.remove("hidden");
+      }
+
+    </script>
 </body>
+
+</html>
