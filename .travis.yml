@@ -1,0 +1,10 @@
+env:
+  global:
+  - GH_REF: github.com/OctoLinker/OctoLinker.github.io
+
+language: node_js
+
+node_js:
+  - "10"
+
+script: bash ./deploy.sh

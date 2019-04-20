@@ -1,0 +1,31 @@
+{
+  "name": "OctoLinker.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bowser": "^1.9.4",
+    "classnames": "^2.2.6",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OctoLinker/OctoLinker.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OctoLinker/OctoLinker.github.io/issues"
+  },
+  "homepage": "https://github.com/OctoLinker/OctoLinker.github.io#readme"
+}
